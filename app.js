@@ -8,7 +8,6 @@ const apiRoutes = require('./routes/api');
 
 const app = express();
 const PORT = 7253;
-//hi
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
