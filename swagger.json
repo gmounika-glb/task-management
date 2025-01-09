@@ -1,0 +1,46 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Task Management API",
+      "description": "API for managing tasks and categories"
+    },
+    "host": "localhost:3000",
+    "basePath": "/api",
+    "paths": {
+      "/categories": {
+        "get": {
+          "summary": "Get all categories",
+          "responses": {
+            "200": { "description": "Success" }
+          }
+        }
+      },
+      "/category": {
+        "post": {
+          "summary": "Add a new category",
+          "parameters": [
+            {
+              "in": "body",
+              "name": "category",
+              "description": "Category data",
+              "required": true,
+              "schema": { "$ref": "#/definitions/Category" }
+            }
+          ],
+          "responses": {
+            "201": { "description": "Category added" }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "Category": {
+        "type": "object",
+        "properties": {
+          "category": { "type": "string" }
+        }
+      }
+    }
+  }
+  

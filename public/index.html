@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management App</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Task Management App</h1>
+    <div class="login-section">
+      <button id="login-btn">Login</button>
+      <button id="signup-btn">Sign Up</button>
+    </div>
+  </header>
+  <main>
+    <section class="categories-section">
+      <h2>Categories</h2>
+      <textarea id="category-input" placeholder="Enter category"></textarea>
+      <button id="add-category-btn">Add Category</button>
+      <div id="categories-container"></div>
+    </section>
+    <section class="tasks-section">
+      <h2 id="task-header">Tasks</h2>
+      <textarea id="task-input" placeholder="Enter task"></textarea>
+      <button id="add-task-btn">Add Task</button>
+      <div id="tasks-container"></div>
+    </section>
+
+    <!-- Signup Modal -->
+<div id="signup-modal" class="modal">
+    <div class="modal-content">
+    <span id="close-signup" class="close">&times;</span>
+      <h2>Sign Up</h2>
+      <input id="signup-username" type="text" placeholder="Username">
+      <input id="signup-email" type="email" placeholder="Email">
+      <input id="signup-password" type="password" placeholder="Password">
+      <button id="signup-submit">Sign Up</button>
+    </div>
+  </div>
+  <!-- Login Modal -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+    <span id="close-login" class="close">&times;</span>
+      <h2>Login</h2>
+      <input id="login-email" type="email" placeholder="Email">
+      <input id="login-password" type="password" placeholder="Password">
+      <button id="login-submit">Login</button>
+    </div>
+  </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
